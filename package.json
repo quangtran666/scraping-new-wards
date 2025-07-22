@@ -12,6 +12,8 @@
     "dev": "ts-node src/index.ts",
     "dev:fast": "ts-node src/index.ts --mode=fast",
     "dev:headless": "ts-node src/index.ts --mode=headless",
+    "dev:resume": "ts-node src/index.ts --resume",
+    "dev:start-from": "ts-node src/index.ts --start-from=",
     "test-scraper": "ts-node src/test.ts",
     "debug": "ts-node src/debug.ts",
     "install-playwright": "playwright install",

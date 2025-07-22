@@ -1,5 +1,5 @@
 import { AddressConverterScraper } from './scraper';
-import { readInputData, writeOutputData, validateInputData, createBackup } from './utils';
+import { readInputData, writeOutputData, validateInputData, createBackup, getLastProcessedId } from './utils';
 import { InputAddressData, OutputAddressData } from './types';
 
 /**
@@ -19,6 +19,7 @@ export class AddressConverterApp {
   private scraper: AddressConverterScraper;
   private readonly inputFilePath = './city_pref_names.json';
   private readonly outputFilePath = './converted_addresses.json';
+  private readonly progressFilePath = './progress.json';
 
   constructor(options?: {
     headless?: boolean;
@@ -40,19 +41,46 @@ export class AddressConverterApp {
   private readonly itemDelay: number;
 
   /**
-   * Process all addresses from the input file
+   * Process all addresses from the input file, optionally starting from a specific pref_old_id
    */
-  async processAllAddresses(): Promise<void> {
+  async processAllAddresses(options?: { startFromId?: number; resumeFromProgress?: boolean }): Promise<void> {
     let results: OutputAddressData[] = [];
     
     try {
       // Step 1: Read and validate input data
       console.log('\n📋 Step 1: Reading input data...');
       const rawData = await readInputData(this.inputFilePath);
-      const inputData = validateInputData(rawData);
+      let inputData = validateInputData(rawData);
       
       if (inputData.length === 0) {
         throw new Error('No valid input data found');
+      }
+
+      // Step 1.5: Handle resume functionality
+      let startFromId: number | null = null;
+      
+      if (options?.resumeFromProgress) {
+        // Get the last processed ID from progress file
+        const lastProcessedId = await getLastProcessedId(this.progressFilePath);
+        if (lastProcessedId !== null) {
+          startFromId = lastProcessedId + 1; // Start from the next ID
+          console.log(`🔄 Resuming from progress: starting from pref_old_id ${startFromId}`);
+        }
+      } else if (options?.startFromId) {
+        startFromId = options.startFromId;
+        console.log(`🎯 Starting from specified pref_old_id: ${startFromId}`);
+      }
+      
+      // Filter input data if we have a starting point
+      if (startFromId !== null) {
+        const originalCount = inputData.length;
+        inputData = inputData.filter(item => item.pref_old_id >= startFromId!);
+        console.log(`📊 Filtered data: ${inputData.length} items remaining (skipped ${originalCount - inputData.length} items)`);
+        
+        if (inputData.length === 0) {
+          console.log(`✅ No items to process - all items before pref_old_id ${startFromId} have been completed`);
+          return;
+        }
       }
 
       // Step 2: Initialize browser
@@ -136,8 +164,7 @@ export class AddressConverterApp {
    * Save progress to a temporary file
    */
   private async saveProgress(results: OutputAddressData[]): Promise<void> {
-    const progressFile = './progress.json';
-    await writeOutputData(results, progressFile);
+    await writeOutputData(results, this.progressFilePath);
     console.log(`💾 Progress saved (${results.length} items)`);
   }
 
@@ -166,15 +193,46 @@ export class AddressConverterApp {
 }
 
 /**
+ * Parse command line arguments for resume functionality
+ */
+function parseCommandLineArgs(): { startFromId?: number; resumeFromProgress?: boolean; isSpeedMode: boolean; isDebugMode: boolean } {
+  const args = process.argv.slice(2);
+  let startFromId: number | undefined;
+  let resumeFromProgress = false;
+  
+  // Check for resume flag
+  if (args.includes('--resume')) {
+    resumeFromProgress = true;
+  }
+  
+  // Check for specific start-from ID
+  const startFromIndex = args.findIndex(arg => arg.startsWith('--start-from='));
+  if (startFromIndex !== -1) {
+    const value = args[startFromIndex].split('=')[1];
+    const parsedValue = parseInt(value, 10);
+    if (!isNaN(parsedValue) && parsedValue > 0) {
+      startFromId = parsedValue;
+    } else {
+      console.error('❌ Invalid --start-from value. Must be a positive integer.');
+      process.exit(1);
+    }
+  }
+  
+  const isSpeedMode = process.env.SPEED_MODE === 'true' || args.includes('--speed');
+  const isDebugMode = process.env.DEBUG_MODE === 'true' || args.includes('--debug');
+  
+  return { startFromId, resumeFromProgress, isSpeedMode, isDebugMode };
+}
+
+/**
  * Application entry point
  */
 async function main(): Promise<void> {
   console.log('🎯 Vietnamese Address Converter Scraper');
   console.log('━'.repeat(50));
   
-  // Check for speed mode from environment or command line
-  const isSpeedMode = process.env.SPEED_MODE === 'true' || process.argv.includes('--speed');
-  const isDebugMode = process.env.DEBUG_MODE === 'true' || process.argv.includes('--debug');
+  // Parse command line arguments
+  const { startFromId, resumeFromProgress, isSpeedMode, isDebugMode } = parseCommandLineArgs();
   
   let config = {};
   
@@ -207,7 +265,7 @@ async function main(): Promise<void> {
   const app = new AddressConverterApp(config);
   
   try {
-    await app.processAllAddresses();
+    await app.processAllAddresses({ startFromId, resumeFromProgress });
     console.log('\n🎉 Application completed successfully!');
     process.exit(0);
     

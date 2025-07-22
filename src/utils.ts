@@ -86,3 +86,36 @@ export async function createBackup(filePath: string): Promise<void> {
     }
   }
 }
+
+/**
+ * Read the progress file and get the last processed pref_old_id
+ */
+export async function getLastProcessedId(progressFilePath: string): Promise<number | null> {
+  try {
+    console.log(`📖 Reading progress from: ${progressFilePath}`);
+    
+    const fileContent = await fs.readFile(progressFilePath, 'utf-8');
+    const progressData: OutputAddressData[] = JSON.parse(fileContent);
+    
+    if (progressData.length === 0) {
+      console.log(`⚠️  Progress file is empty`);
+      return null;
+    }
+    
+    // Get the last processed item's pref_old_id
+    const lastItem = progressData[progressData.length - 1];
+    const lastId = lastItem.pref_old_id;
+    
+    console.log(`✅ Last processed pref_old_id: ${lastId} (${progressData.length} total records)`);
+    return lastId;
+    
+  } catch (error) {
+    if ((error as any).code === 'ENOENT') {
+      console.log(`📝 Progress file not found, starting from beginning`);
+      return null;
+    }
+    
+    console.error(`❌ Failed to read progress file:`, error);
+    throw error;
+  }
+}
