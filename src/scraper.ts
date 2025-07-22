@@ -24,9 +24,9 @@ export class AddressConverterScraper {
     // Default configuration
     this.config = {
       baseUrl: 'https://address-converter.io.vn/',
-      timeout: 30000, // 30 seconds
+      timeout: 10000, // 10 seconds
       operationDelay: 2000, // 2 seconds between operations
-      maxRetries: 3,
+      maxRetries: 1,
       headless: false, // Set to true for production
       ...config
     };
@@ -140,8 +140,9 @@ export class AddressConverterScraper {
 
   /**
    * Select prefecture/district from the second dropdown
+   * Returns the actual prefecture name used (original or fallback)
    */
-  async selectPrefecture(prefName: string): Promise<void> {
+  async selectPrefecture(prefName: string): Promise<string> {
     if (!this.page) throw new Error('Browser not initialized');
     
     console.log(`🏘️  Selecting prefecture: ${prefName}`);
@@ -150,11 +151,36 @@ export class AddressConverterScraper {
     await this.page.getByText('-- Chọn quận/huyện --').click();
     await this.page.waitForTimeout(this.config.operationDelay);
     
-    // Look for the prefecture option
-    await this.page.getByRole('option', { name: prefName }).click();
-    
-    await this.page.waitForTimeout(this.config.operationDelay);
-    console.log(`✅ Prefecture selected: ${prefName}`);
+    // Try to select with original name first
+    try {
+      await this.page.getByRole('option', { name: prefName }).click();
+      await this.page.waitForTimeout(this.config.operationDelay);
+      console.log(`✅ Prefecture selected (original): ${prefName}`);
+      return prefName;
+    } catch (error) {
+      console.log(`⚠️  Original prefecture name not found: ${prefName}, trying fallback...`);
+      
+      // Create fallback name by replacing administrative divisions
+      let fallbackName = prefName;
+      fallbackName = fallbackName.replace(/^Huyện\s/, 'Thị xã ');
+      fallbackName = fallbackName.replace(/^Thành phố\s/, 'Thị xã ');
+      fallbackName = fallbackName.replace(/^Quận\s/, 'Thị xã ');
+      
+      if (fallbackName !== prefName) {
+        try {
+          await this.page.getByRole('option', { name: fallbackName }).click();
+          await this.page.waitForTimeout(this.config.operationDelay);
+          console.log(`✅ Prefecture selected (fallback): ${fallbackName}`);
+          return fallbackName;
+        } catch (fallbackError) {
+          console.error(`❌ Both original and fallback prefecture names failed: ${prefName} -> ${fallbackName}`);
+          throw new Error(`Prefecture not found: ${prefName} (tried fallback: ${fallbackName})`);
+        }
+      } else {
+        console.error(`❌ No fallback available for: ${prefName}`);
+        throw error;
+      }
+    }
   }
 
   /**
@@ -342,17 +368,28 @@ export class AddressConverterScraper {
       try {
         await this.navigateToSite();
         await this.selectCity(inputData.city_name);
-        await this.selectPrefecture(inputData.pref_name);
+        const actualPrefName = await this.selectPrefecture(inputData.pref_name);
         await this.selectWard();
         await this.clickConvert();
         
         const newName = await this.extractResult();
         
-        return {
+        // Check if fallback was used
+        const usedFallback = actualPrefName !== inputData.pref_name;
+        
+        const result: OutputAddressData = {
+          city_name: inputData.city_name,
           pref_old_id: inputData.pref_old_id,
           pref_old_name: inputData.pref_name,
           pref_new_name: newName
         };
+        
+        // Add fallback field if fallback was used
+        if (usedFallback) {
+          result.pref_new_fallback = newName;
+        }
+        
+        return result;
         
       } catch (error) {
         lastError = error as Error;

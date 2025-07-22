@@ -1,552 +1,482 @@
 [
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 1,
     "pref_old_name": "Quận Ba Đình",
     "pref_new_name": "Phường Ngọc Hà"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 2,
     "pref_old_name": "Quận Hoàn Kiếm",
     "pref_new_name": "Phường Hồng Hà"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 3,
     "pref_old_name": "Quận Tây Hồ",
     "pref_new_name": "Phường Tây Hồ"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 4,
     "pref_old_name": "Quận Long Biên",
     "pref_new_name": "Phường Hồng Hà"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 5,
     "pref_old_name": "Quận Cầu Giấy",
     "pref_new_name": "Phường Nghĩa Đô"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 6,
     "pref_old_name": "Quận Đống Đa",
     "pref_new_name": "Phường Giảng Võ"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 7,
     "pref_old_name": "Quận Hai Bà Trưng",
     "pref_new_name": "Phường Hồng Hà"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 8,
     "pref_old_name": "Quận Hoàng Mai",
     "pref_new_name": "Phường Định Công"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 9,
     "pref_old_name": "Quận Thanh Xuân",
     "pref_new_name": "Phường Khương Đình"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 10,
     "pref_old_name": "Huyện Sóc Sơn",
     "pref_new_name": "Xã Đa Phúc"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 11,
     "pref_old_name": "Huyện Đông Anh",
     "pref_new_name": "Xã Phúc Thịnh"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 12,
     "pref_old_name": "Huyện Gia Lâm",
     "pref_new_name": "Phường Long Biên"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 13,
     "pref_old_name": "Quận Nam Từ Liêm",
     "pref_new_name": "Phường Từ Liêm"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 14,
     "pref_old_name": "Huyện Thanh Trì",
     "pref_new_name": "Xã Thanh Trì"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 15,
     "pref_old_name": "Quận Bắc Từ Liêm",
     "pref_new_name": "Phường Nghĩa Đô"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 16,
     "pref_old_name": "Huyện Mê Linh",
     "pref_new_name": "Xã Quang Minh"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 17,
     "pref_old_name": "Quận Hà Đông",
     "pref_new_name": "Phường Chương Mỹ"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 18,
     "pref_old_name": "Thị xã Sơn Tây",
     "pref_new_name": "Xã Đoài Phương"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 19,
     "pref_old_name": "Huyện Ba Vì",
     "pref_new_name": "Xã Suối Hai"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 20,
     "pref_old_name": "Huyện Phúc Thọ",
     "pref_new_name": "Xã Hát Môn"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 21,
     "pref_old_name": "Huyện Đan Phượng",
     "pref_new_name": "Xã Đan Phượng"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 22,
     "pref_old_name": "Huyện Hoài Đức",
     "pref_new_name": "Phường Tây Mỗ"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 23,
     "pref_old_name": "Huyện Quốc Oai",
     "pref_new_name": "Xã Kiều Phú"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 24,
     "pref_old_name": "Huyện Thạch Thất",
     "pref_new_name": "Xã Hạ Bằng"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 25,
     "pref_old_name": "Huyện Chương Mỹ",
     "pref_new_name": "Phường Chương Mỹ"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 26,
     "pref_old_name": "Huyện Thanh Oai",
     "pref_new_name": "Xã Bình Minh"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 27,
     "pref_old_name": "Huyện Thường Tín",
     "pref_new_name": "Xã Chương Dương"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 28,
     "pref_old_name": "Huyện Phú Xuyên",
     "pref_new_name": "Xã Đại Xuyên"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 29,
     "pref_old_name": "Huyện Ứng Hòa",
     "pref_new_name": "Xã Hòa Xá"
   },
   {
+    "city_name": "Hà Nội",
     "pref_old_id": 30,
     "pref_old_name": "Huyện Mỹ Đức",
     "pref_new_name": "Xã Hồng Sơn"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 31,
     "pref_old_name": "Thành phố Hà Giang",
     "pref_new_name": "Phường Hà Giang 2"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 32,
     "pref_old_name": "Huyện Đồng Văn",
     "pref_new_name": "Xã Đồng Văn"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 33,
     "pref_old_name": "Huyện Mèo Vạc",
     "pref_new_name": "Xã Khâu Vai"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 34,
     "pref_old_name": "Huyện Yên Minh",
     "pref_new_name": "Xã Bạch Đích"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 35,
     "pref_old_name": "Huyện Quản Bạ",
     "pref_new_name": "Xã Cán Tỷ"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 36,
     "pref_old_name": "Huyện Vị Xuyên",
     "pref_new_name": "Xã Bạch Ngọc"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 37,
     "pref_old_name": "Huyện Bắc Mê",
     "pref_new_name": "Xã Đường Hồng"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 38,
     "pref_old_name": "Huyện Hoàng Su Phì",
     "pref_new_name": "Xã Hoàng Su Phì"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 39,
     "pref_old_name": "Huyện Xín Mần",
     "pref_new_name": "Xã Xín Mần"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 40,
     "pref_old_name": "Huyện Bắc Quang",
     "pref_new_name": "Xã Bằng Hành"
   },
   {
+    "city_name": "Hà Giang",
     "pref_old_id": 41,
     "pref_old_name": "Huyện Quang Bình",
     "pref_new_name": "Xã Yên Thành"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 42,
     "pref_old_name": "Thành phố Cao Bằng",
     "pref_new_name": "Phường Tân Giang"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 43,
     "pref_old_name": "Huyện Bảo Lâm",
     "pref_new_name": "Xã Cốc Pàng"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 44,
     "pref_old_name": "Huyện Bảo Lạc",
     "pref_new_name": "Xã Bảo Lạc"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 45,
     "pref_old_name": "Huyện Hà Quảng",
     "pref_new_name": "Xã Tổng Cọt"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 46,
     "pref_old_name": "Huyện Trùng Khánh",
     "pref_new_name": "Xã Trà Lĩnh"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 47,
     "pref_old_name": "Huyện Hạ Lang",
     "pref_new_name": "Xã Vinh Quý"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 48,
     "pref_old_name": "Huyện Quảng Hòa",
     "pref_new_name": "Xã Bế Văn Đàn"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 49,
     "pref_old_name": "Huyện Hoà An",
     "pref_new_name": "Xã Bạch Đằng"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 50,
     "pref_old_name": "Huyện Nguyên Bình",
     "pref_new_name": "Xã Ca Thành"
   },
   {
+    "city_name": "Cao Bằng",
     "pref_old_id": 51,
     "pref_old_name": "Huyện Thạch An",
     "pref_new_name": "Xã Canh Tân"
   },
   {
+    "city_name": "Bắc Kạn",
     "pref_old_id": 52,
     "pref_old_name": "Thành Phố Bắc Kạn",
     "pref_new_name": "Xã Phong Quang"
   },
   {
+    "city_name": "Bắc Kạn",
     "pref_old_id": 53,
     "pref_old_name": "Huyện Pác Nặm",
     "pref_new_name": "Xã Nghiên Loan"
   },
   {
+    "city_name": "Bắc Kạn",
     "pref_old_id": 54,
     "pref_old_name": "Huyện Ba Bể",
     "pref_new_name": "Xã Phúc Lộc"
   },
   {
+    "city_name": "Bắc Kạn",
     "pref_old_id": 55,
     "pref_old_name": "Huyện Ngân Sơn",
     "pref_new_name": "Xã Bằng Vân"
   },
   {
+    "city_name": "Bắc Kạn",
     "pref_old_id": 56,
     "pref_old_name": "Huyện Bạch Thông",
     "pref_new_name": "Xã Vĩnh Thông"
   },
   {
+    "city_name": "Bắc Kạn",
     "pref_old_id": 57,
     "pref_old_name": "Huyện Chợ Đồn",
     "pref_new_name": "Xã Yên Thịnh"
   },
   {
+    "city_name": "Bắc Kạn",
     "pref_old_id": 58,
     "pref_old_name": "Huyện Chợ Mới",
     "pref_new_name": "Xã Yên Bình"
   },
   {
+    "city_name": "Bắc Kạn",
     "pref_old_id": 59,
     "pref_old_name": "Huyện Na Rì",
     "pref_new_name": "Xã Côn Minh"
   },
   {
+    "city_name": "Tuyên Quang",
     "pref_old_id": 60,
     "pref_old_name": "Thành phố Tuyên Quang",
     "pref_new_name": "Phường An Tường"
   },
   {
+    "city_name": "Tuyên Quang",
     "pref_old_id": 61,
     "pref_old_name": "Huyện Lâm Bình",
     "pref_new_name": "Xã Bình An"
   },
   {
+    "city_name": "Tuyên Quang",
     "pref_old_id": 62,
     "pref_old_name": "Huyện Na Hang",
     "pref_new_name": "Xã Côn Lôn"
   },
   {
+    "city_name": "Tuyên Quang",
     "pref_old_id": 63,
     "pref_old_name": "Huyện Chiêm Hóa",
     "pref_new_name": "Xã Kim Bình"
   },
   {
+    "city_name": "Tuyên Quang",
     "pref_old_id": 64,
     "pref_old_name": "Huyện Hàm Yên",
     "pref_new_name": "Xã Bạch Xa"
   },
   {
+    "city_name": "Tuyên Quang",
     "pref_old_id": 65,
     "pref_old_name": "Huyện Yên Sơn",
     "pref_new_name": "Xã Yên Sơn"
   },
   {
+    "city_name": "Tuyên Quang",
     "pref_old_id": 66,
     "pref_old_name": "Huyện Sơn Dương",
     "pref_new_name": "Xã Minh Thanh"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 67,
     "pref_old_name": "Thành phố Lào Cai",
     "pref_new_name": "Phường Cam Đường"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 68,
     "pref_old_name": "Huyện Bát Xát",
     "pref_new_name": "Xã Y Tý"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 69,
     "pref_old_name": "Huyện Mường Khương",
     "pref_new_name": "Xã Bản Lầu"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 70,
     "pref_old_name": "Huyện Si Ma Cai",
     "pref_new_name": "Xã Sín Chéng"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 71,
     "pref_old_name": "Huyện Bắc Hà",
     "pref_new_name": "Xã Cốc Lầu"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 72,
     "pref_old_name": "Huyện Bảo Thắng",
     "pref_new_name": "Xã Phong Hải"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 73,
     "pref_old_name": "Huyện Bảo Yên",
     "pref_new_name": "Xã Bảo Hà"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 74,
     "pref_old_name": "Thị xã Sa Pa",
     "pref_new_name": "Xã Bản Hồ"
   },
   {
+    "city_name": "Lào Cai",
     "pref_old_id": 75,
     "pref_old_name": "Huyện Văn Bàn",
     "pref_new_name": "Xã Chiềng Ken"
   },
   {
+    "city_name": "Điện Biên",
     "pref_old_id": 76,
     "pref_old_name": "Thành phố Điện Biên Phủ",
     "pref_new_name": "Phường Điện Biên Phủ"
   },
   {
+    "city_name": "Điện Biên",
     "pref_old_id": 77,
     "pref_old_name": "Thị xã Mường Lay",
     "pref_new_name": "Phường Mường Lay"
   },
   {
+    "city_name": "Điện Biên",
     "pref_old_id": 78,
     "pref_old_name": "Huyện Mường Nhé",
     "pref_new_name": "Xã Mường Nhé"
   },
   {
+    "city_name": "Điện Biên",
     "pref_old_id": 79,
     "pref_old_name": "Huyện Mường Chà",
     "pref_new_name": "Xã Mường Tùng"
   },
   {
+    "city_name": "Điện Biên",
     "pref_old_id": 80,
     "pref_old_name": "Huyện Tủa Chùa",
     "pref_new_name": "Xã Tủa Thàng"
-  },
-  {
-    "pref_old_id": 81,
-    "pref_old_name": "Huyện Tuần Giáo",
-    "pref_new_name": "Xã Búng Lao"
-  },
-  {
-    "pref_old_id": 82,
-    "pref_old_name": "Huyện Điện Biên",
-    "pref_new_name": "ERROR: locator.click: Error: strict mode violation: getByRole('option', { name: 'Huyện Điện Biên' }) resolved to 2 elements:\n    1) <div cmdk-item=\"\" role=\"option\" id=\"radix-«r2b»\" aria-disabled=\"false\" aria-selected=\"false\" data-disabled=\"false\" data-selected=\"false\" data-slot=\"command-item\" data-value=\"Huyện Điện Biên\" class=\"data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50…>…</div> aka getByRole('option', { name: 'Huyện Điện Biên', exact: true })\n    2) <div cmdk-item=\"\" role=\"option\" id=\"radix-«r2c»\" aria-disabled=\"false\" aria-selected=\"false\" data-disabled=\"false\" data-selected=\"false\" data-slot=\"command-item\" data-value=\"Huyện Điện Biên Đông\" class=\"data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opaci…>…</div> aka getByRole('option', { name: 'Huyện Điện Biên Đông' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: 'Huyện Điện Biên' })\u001b[22m\n"
-  },
-  {
-    "pref_old_id": 83,
-    "pref_old_name": "Huyện Điện Biên Đông",
-    "pref_new_name": "Xã Mường Luân"
-  },
-  {
-    "pref_old_id": 84,
-    "pref_old_name": "Huyện Mường Ảng",
-    "pref_new_name": "Xã Mường Ảng"
-  },
-  {
-    "pref_old_id": 85,
-    "pref_old_name": "Huyện Nậm Pồ",
-    "pref_new_name": "Xã Mường Chà"
-  },
-  {
-    "pref_old_id": 86,
-    "pref_old_name": "Thành phố Lai Châu",
-    "pref_new_name": "Phường Đoàn Kết"
-  },
-  {
-    "pref_old_id": 87,
-    "pref_old_name": "Huyện Tam Đường",
-    "pref_new_name": "Xã Bản Bo"
-  },
-  {
-    "pref_old_id": 88,
-    "pref_old_name": "Huyện Mường Tè",
-    "pref_new_name": "Xã Bum Nưa"
-  },
-  {
-    "pref_old_id": 89,
-    "pref_old_name": "Huyện Sìn Hồ",
-    "pref_new_name": "Xã Nậm Mạ"
-  },
-  {
-    "pref_old_id": 90,
-    "pref_old_name": "Huyện Phong Thổ",
-    "pref_new_name": "Xã Khổng Lào"
-  },
-  {
-    "pref_old_id": 91,
-    "pref_old_name": "Huyện Than Uyên",
-    "pref_new_name": "Xã Than Uyên"
-  },
-  {
-    "pref_old_id": 92,
-    "pref_old_name": "Huyện Tân Uyên",
-    "pref_new_name": "Xã Pắc Ta"
-  },
-  {
-    "pref_old_id": 93,
-    "pref_old_name": "Huyện Nậm Nhùn",
-    "pref_new_name": "Xã Hua Bum"
-  },
-  {
-    "pref_old_id": 94,
-    "pref_old_name": "Thành phố Sơn La",
-    "pref_new_name": "Phường Chiềng An"
-  },
-  {
-    "pref_old_id": 95,
-    "pref_old_name": "Huyện Quỳnh Nhai",
-    "pref_new_name": "Xã Mường Chiên"
-  },
-  {
-    "pref_old_id": 96,
-    "pref_old_name": "Huyện Thuận Châu",
-    "pref_new_name": "Xã Muổi Nọi"
-  },
-  {
-    "pref_old_id": 97,
-    "pref_old_name": "Huyện Mường La",
-    "pref_new_name": "Xã Chiềng Hoa"
-  },
-  {
-    "pref_old_id": 98,
-    "pref_old_name": "Huyện Bắc Yên",
-    "pref_new_name": "Xã Bắc Yên"
-  },
-  {
-    "pref_old_id": 99,
-    "pref_old_name": "Huyện Phù Yên",
-    "pref_new_name": "Xã Tân Phong"
-  },
-  {
-    "pref_old_id": 100,
-    "pref_old_name": "Huyện Mộc Châu",
-    "pref_new_name": "ERROR: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: 'Huyện Mộc Châu' })\u001b[22m\n"
-  },
-  {
-    "pref_old_id": 101,
-    "pref_old_name": "Huyện Yên Châu",
-    "pref_new_name": "Xã Yên Châu"
-  },
-  {
-    "pref_old_id": 102,
-    "pref_old_name": "Huyện Mai Sơn",
-    "pref_new_name": "Xã Chiềng Mai"
-  },
-  {
-    "pref_old_id": 103,
-    "pref_old_name": "Huyện Sông Mã",
-    "pref_new_name": "Xã Bó Sinh"
-  },
-  {
-    "pref_old_id": 104,
-    "pref_old_name": "Huyện Sốp Cộp",
-    "pref_new_name": "Xã Púng Bánh"
-  },
-  {
-    "pref_old_id": 105,
-    "pref_old_name": "Huyện Vân Hồ",
-    "pref_new_name": "Xã Tô Múa"
-  },
-  {
-    "pref_old_id": 106,
-    "pref_old_name": "Thành phố Yên Bái",
-    "pref_new_name": "Phường Âu Lâu"
-  },
-  {
-    "pref_old_id": 107,
-    "pref_old_name": "Thị xã Nghĩa Lộ",
-    "pref_new_name": "Phường Cầu Thia"
-  },
-  {
-    "pref_old_id": 108,
-    "pref_old_name": "Huyện Lục Yên",
-    "pref_new_name": "Xã Khánh Hòa"
-  },
-  {
-    "pref_old_id": 109,
-    "pref_old_name": "Huyện Văn Yên",
-    "pref_new_name": "Xã Đông Cuông"
-  },
-  {
-    "pref_old_id": 110,
-    "pref_old_name": "Huyện Mù Căng Chải",
-    "pref_new_name": "Xã Tú Lệ"
   }
 ]

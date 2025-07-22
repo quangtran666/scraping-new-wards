@@ -94,9 +94,11 @@ export class AddressConverterApp {
           
           // Add failed entry with error marker
           results.push({
+            city_name: item.city_name,
             pref_old_id: item.pref_old_id,
             pref_old_name: item.pref_name,
-            pref_new_name: `ERROR: ${error instanceof Error ? error.message : 'Unknown error'}`
+            pref_new_name: `ERROR: ${error instanceof Error ? error.message : 'Unknown error'}`,
+            pref_new_fallback: item.pref_name,
           });
         }
         

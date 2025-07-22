@@ -18,9 +18,11 @@ export interface InputAddressData {
  * Output data structure after conversion
  */
 export interface OutputAddressData {
+  city_name: string;
   pref_old_id: number;
   pref_old_name: string;
   pref_new_name: string;
+  pref_new_fallback?: string;
 }
 
 /**
