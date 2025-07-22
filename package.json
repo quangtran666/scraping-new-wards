@@ -1,0 +1,32 @@
+{
+  "name": "address-converter-scraper",
+  "version": "1.0.0",
+  "description": "Playwright TypeScript scraper for converting Vietnamese address data from old to new administrative divisions",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:fast": "node dist/index.js --mode=fast",
+    "start:headless": "node dist/index.js --mode=headless", 
+    "start:speed": "node dist/index.js --mode=speed",
+    "dev": "ts-node src/index.ts",
+    "dev:fast": "ts-node src/index.ts --mode=fast",
+    "dev:headless": "ts-node src/index.ts --mode=headless",
+    "test-scraper": "ts-node src/test.ts",
+    "debug": "ts-node src/debug.ts",
+    "install-playwright": "playwright install",
+    "test": "playwright test"
+  },
+  "keywords": ["playwright", "typescript", "scraper", "vietnam", "address-converter"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@playwright/test": "^1.40.0"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}

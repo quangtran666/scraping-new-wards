@@ -1,0 +1,17 @@
+[
+  {
+    "city_name": "Hà Nội",
+    "pref_old_id": 1,
+    "pref_name": "Quận Ba Đình"
+  },
+  {
+    "city_name": "Hà Nội",
+    "pref_old_id": 2,
+    "pref_name": "Quận Hoàn Kiếm"
+  },
+  {
+    "city_name": "Tỉnh Hà Giang",
+    "pref_old_id": 31,
+    "pref_name": "Thành phố Hà Giang"
+  }
+]

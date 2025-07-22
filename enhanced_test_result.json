@@ -1,0 +1,52 @@
+[
+  {
+    "pref_old_id": 1,
+    "pref_old_name": "Quận Ba Đình",
+    "pref_new_name": "Phường Ngọc Hà"
+  },
+  {
+    "pref_old_id": 2,
+    "pref_old_name": "Quận Hoàn Kiếm",
+    "pref_new_name": "Phường Hồng Hà"
+  },
+  {
+    "pref_old_id": 3,
+    "pref_old_name": "Quận Tây Hồ",
+    "pref_new_name": "Phường Tây Hồ"
+  },
+  {
+    "pref_old_id": 4,
+    "pref_old_name": "Quận Long Biên",
+    "pref_new_name": "Phường Hồng Hà"
+  },
+  {
+    "pref_old_id": 5,
+    "pref_old_name": "Quận Cầu Giấy",
+    "pref_new_name": "Phường Nghĩa Đô"
+  },
+  {
+    "pref_old_id": 6,
+    "pref_old_name": "Quận Đống Đa",
+    "pref_new_name": "Phường Giảng Võ"
+  },
+  {
+    "pref_old_id": 7,
+    "pref_old_name": "Quận Hai Bà Trưng",
+    "pref_new_name": "Phường Hồng Hà"
+  },
+  {
+    "pref_old_id": 8,
+    "pref_old_name": "Quận Hoàng Mai",
+    "pref_new_name": "Phường Định Công"
+  },
+  {
+    "pref_old_id": 9,
+    "pref_old_name": "Quận Thanh Xuân",
+    "pref_new_name": "Phường Khương Đình"
+  },
+  {
+    "pref_old_id": 10,
+    "pref_old_name": "Huyện Sóc Sơn",
+    "pref_new_name": "Xã Đa Phúc"
+  }
+]
