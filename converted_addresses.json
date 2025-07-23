@@ -1,0 +1,757 @@
+[
+  {
+    "city_name": "Long An",
+    "pref_old_id": 581,
+    "pref_old_name": "Huyện Bến Lức",
+    "pref_new_name": "Xã Bến Lức"
+  },
+  {
+    "city_name": "Long An",
+    "pref_old_id": 582,
+    "pref_old_name": "Huyện Thủ Thừa",
+    "pref_new_name": "Xã Mỹ Thạnh"
+  },
+  {
+    "city_name": "Long An",
+    "pref_old_id": 583,
+    "pref_old_name": "Huyện Tân Trụ",
+    "pref_new_name": "Xã Tân Trụ"
+  },
+  {
+    "city_name": "Long An",
+    "pref_old_id": 584,
+    "pref_old_name": "Huyện Cần Đước",
+    "pref_new_name": "Xã Cần Đước"
+  },
+  {
+    "city_name": "Long An",
+    "pref_old_id": 585,
+    "pref_old_name": "Huyện Cần Giuộc",
+    "pref_new_name": "Xã Cần Giuộc"
+  },
+  {
+    "city_name": "Long An",
+    "pref_old_id": 586,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "Xã An Lục Long"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 587,
+    "pref_old_name": "Thành phố Mỹ Tho",
+    "pref_new_name": "Phường Mỹ Tho"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 588,
+    "pref_old_name": "Thị xã Gò Công",
+    "pref_new_name": "ERROR: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option', { name: 'Thị xã Gò Công' })\u001b[22m\n",
+    "pref_new_fallback": "Thị xã Gò Công"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 589,
+    "pref_old_name": "Thị xã Cai Lậy",
+    "pref_new_name": "Phường Mỹ Phước Tây"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 590,
+    "pref_old_name": "Huyện Tân Phước",
+    "pref_new_name": "Xã Hưng Thạnh"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 591,
+    "pref_old_name": "Huyện Cái Bè",
+    "pref_new_name": "Xã Hội Cư"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 592,
+    "pref_old_name": "Huyện Cai Lậy",
+    "pref_new_name": "Xã Bình Phú"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 593,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "Xã Vĩnh Kim"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 594,
+    "pref_old_name": "Huyện Chợ Gạo",
+    "pref_new_name": "Xã An Thạnh Thủy"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 595,
+    "pref_old_name": "Huyện Gò Công Tây",
+    "pref_new_name": "Xã Đồng Sơn"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 596,
+    "pref_old_name": "Huyện Gò Công Đông",
+    "pref_new_name": "Xã Tân Điền"
+  },
+  {
+    "city_name": "Tiền Giang",
+    "pref_old_id": 597,
+    "pref_old_name": "Huyện Tân Phú Đông",
+    "pref_new_name": "Xã Tân Phú Đông"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 598,
+    "pref_old_name": "Thành phố Bến Tre",
+    "pref_new_name": "Phường Sơn Đông"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 599,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "Xã Giao Long"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 600,
+    "pref_old_name": "Huyện Chợ Lách",
+    "pref_new_name": "Xã Chợ Lách"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 601,
+    "pref_old_name": "Huyện Mỏ Cày Nam",
+    "pref_new_name": "Xã An Định"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 602,
+    "pref_old_name": "Huyện Giồng Trôm",
+    "pref_new_name": "Xã Giồng Trôm"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 603,
+    "pref_old_name": "Huyện Bình Đại",
+    "pref_new_name": "Xã Bình Đại"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 604,
+    "pref_old_name": "Huyện Ba Tri",
+    "pref_new_name": "Xã Ba Tri"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 605,
+    "pref_old_name": "Huyện Thạnh Phú",
+    "pref_new_name": "Xã Thạnh Hải"
+  },
+  {
+    "city_name": "Bến Tre",
+    "pref_old_id": 606,
+    "pref_old_name": "Huyện Mỏ Cày Bắc",
+    "pref_new_name": "Xã Tân Thành Bình"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 607,
+    "pref_old_name": "Thành phố Trà Vinh",
+    "pref_new_name": "Phường Trà Vinh"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 608,
+    "pref_old_name": "Huyện Càng Long",
+    "pref_new_name": "Xã An Trường"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 609,
+    "pref_old_name": "Huyện Cầu Kè",
+    "pref_new_name": "Xã An Phú Tân"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 610,
+    "pref_old_name": "Huyện Tiểu Cần",
+    "pref_new_name": "Xã Tân Hòa"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 611,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "Xã Châu Thành"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 612,
+    "pref_old_name": "Huyện Cầu Ngang",
+    "pref_new_name": "Xã Cầu Ngang"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 613,
+    "pref_old_name": "Huyện Trà Cú",
+    "pref_new_name": "Xã Lưu Nghiệp Anh"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 614,
+    "pref_old_name": "Huyện Duyên Hải",
+    "pref_new_name": "Xã Đôn Châu"
+  },
+  {
+    "city_name": "Trà Vinh",
+    "pref_old_id": 615,
+    "pref_old_name": "Thị xã Duyên Hải",
+    "pref_new_name": "Phường Duyên Hải"
+  },
+  {
+    "city_name": "Vĩnh Long",
+    "pref_old_id": 616,
+    "pref_old_name": "Thành phố Vĩnh Long",
+    "pref_new_name": "Phường Long Châu"
+  },
+  {
+    "city_name": "Vĩnh Long",
+    "pref_old_id": 617,
+    "pref_old_name": "Huyện Long Hồ",
+    "pref_new_name": "Xã An Bình"
+  },
+  {
+    "city_name": "Vĩnh Long",
+    "pref_old_id": 618,
+    "pref_old_name": "Huyện Mang Thít",
+    "pref_new_name": "Xã Cái Nhum"
+  },
+  {
+    "city_name": "Vĩnh Long",
+    "pref_old_id": 619,
+    "pref_old_name": "Huyện Vũng Liêm",
+    "pref_new_name": "Xã Hiếu Thành"
+  },
+  {
+    "city_name": "Vĩnh Long",
+    "pref_old_id": 620,
+    "pref_old_name": "Huyện Tam Bình",
+    "pref_new_name": "Xã Ngãi Tứ"
+  },
+  {
+    "city_name": "Vĩnh Long",
+    "pref_old_id": 621,
+    "pref_old_name": "Thị xã Bình Minh",
+    "pref_new_name": "Phường Cái Vồn"
+  },
+  {
+    "city_name": "Vĩnh Long",
+    "pref_old_id": 622,
+    "pref_old_name": "Huyện Trà Ôn",
+    "pref_new_name": "Xã Hòa Bình"
+  },
+  {
+    "city_name": "Vĩnh Long",
+    "pref_old_id": 623,
+    "pref_old_name": "Huyện Bình Tân",
+    "pref_new_name": "Xã Mỹ Thuận"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 624,
+    "pref_old_name": "Thành phố Cao Lãnh",
+    "pref_new_name": "Phường Cao Lãnh"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 625,
+    "pref_old_name": "Thành phố Sa Đéc",
+    "pref_new_name": "Phường Sa Đéc"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 626,
+    "pref_old_name": "Thành phố Hồng Ngự",
+    "pref_new_name": "Phường An Bình"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 627,
+    "pref_old_name": "Huyện Tân Hồng",
+    "pref_new_name": "Xã An Phước"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 628,
+    "pref_old_name": "Huyện Hồng Ngự",
+    "pref_new_name": "Xã Long Khánh"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 629,
+    "pref_old_name": "Huyện Tam Nông",
+    "pref_new_name": "Xã An Hòa"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 630,
+    "pref_old_name": "Huyện Tháp Mười",
+    "pref_new_name": "Xã Đốc Binh Kiều"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 631,
+    "pref_old_name": "Huyện Cao Lãnh",
+    "pref_new_name": "Phường Mỹ Trà"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 632,
+    "pref_old_name": "Huyện Thanh Bình",
+    "pref_new_name": "Xã An Long"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 633,
+    "pref_old_name": "Huyện Lấp Vò",
+    "pref_new_name": "Xã Lấp Vò"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 634,
+    "pref_old_name": "Huyện Lai Vung",
+    "pref_new_name": "Xã Phong Hòa"
+  },
+  {
+    "city_name": "Đồng Tháp",
+    "pref_old_id": 635,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "Xã Phú Hựu"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 636,
+    "pref_old_name": "Thành phố Long Xuyên",
+    "pref_new_name": "Phường Bình Đức"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 637,
+    "pref_old_name": "Thành phố Châu Đốc",
+    "pref_new_name": "Phường Châu Đốc"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 638,
+    "pref_old_name": "Huyện An Phú",
+    "pref_new_name": "Xã An Phú"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 639,
+    "pref_old_name": "Thị xã Tân Châu",
+    "pref_new_name": "Xã Châu Phong"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 640,
+    "pref_old_name": "Huyện Phú Tân",
+    "pref_new_name": "Xã Bình Thạnh Đông"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 641,
+    "pref_old_name": "Huyện Châu Phú",
+    "pref_new_name": "Xã Bình Mỹ"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 642,
+    "pref_old_name": "Huyện Tịnh Biên",
+    "pref_new_name": "Xã An Cư",
+    "pref_new_fallback": "Xã An Cư"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 643,
+    "pref_old_name": "Huyện Tri Tôn",
+    "pref_new_name": "Xã Ô Lâm"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 644,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "Xã An Châu"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 645,
+    "pref_old_name": "Huyện Chợ Mới",
+    "pref_new_name": "Xã Long Kiến"
+  },
+  {
+    "city_name": "An Giang",
+    "pref_old_id": 646,
+    "pref_old_name": "Huyện Thoại Sơn",
+    "pref_new_name": "Xã Tây Phú"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 647,
+    "pref_old_name": "Thành phố Rạch Giá",
+    "pref_new_name": "Phường Rạch Giá"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 648,
+    "pref_old_name": "Thành phố Hà Tiên",
+    "pref_new_name": "Phường Hà Tiên"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 649,
+    "pref_old_name": "Huyện Kiên Lương",
+    "pref_new_name": "Xã Kiên Lương"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 650,
+    "pref_old_name": "Huyện Hòn Đất",
+    "pref_new_name": "Xã Bình Giang"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 651,
+    "pref_old_name": "Huyện Tân Hiệp",
+    "pref_new_name": "Xã Tân Hội"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 652,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "Xã Bình An"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 653,
+    "pref_old_name": "Huyện Giồng Riềng",
+    "pref_new_name": "Xã Giồng Riềng"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 654,
+    "pref_old_name": "Huyện Gò Quao",
+    "pref_new_name": "Xã Gò Quao"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 655,
+    "pref_old_name": "Huyện An Biên",
+    "pref_new_name": "Xã Đông Thái"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 656,
+    "pref_old_name": "Huyện An Minh",
+    "pref_new_name": "Xã Đông Hòa"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 657,
+    "pref_old_name": "Huyện Vĩnh Thuận",
+    "pref_new_name": "Xã Vĩnh Bình"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 658,
+    "pref_old_name": "Thành phố Phú Quốc",
+    "pref_new_name": "ERROR: Failed to extract result text - no matching paragraph found",
+    "pref_new_fallback": "Thành phố Phú Quốc"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 659,
+    "pref_old_name": "Huyện Kiên Hải",
+    "pref_new_name": "ERROR: Failed to extract result text - no matching paragraph found",
+    "pref_new_fallback": "Huyện Kiên Hải"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 660,
+    "pref_old_name": "Huyện U Minh Thượng",
+    "pref_new_name": "Xã U Minh Thượng"
+  },
+  {
+    "city_name": "Kiên Giang",
+    "pref_old_id": 661,
+    "pref_old_name": "Huyện Giang Thành",
+    "pref_new_name": "Xã Giang Thành"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 662,
+    "pref_old_name": "Quận Ninh Kiều",
+    "pref_new_name": "Phường An Bình"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 663,
+    "pref_old_name": "Quận Ô Môn",
+    "pref_new_name": "Phường Ô Môn"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 664,
+    "pref_old_name": "Quận Bình Thuỷ",
+    "pref_new_name": "Phường Bình Thủy"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 665,
+    "pref_old_name": "Quận Cái Răng",
+    "pref_new_name": "Phường Cái Răng"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 666,
+    "pref_old_name": "Quận Thốt Nốt",
+    "pref_new_name": "Phường Thới Long"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 667,
+    "pref_old_name": "Huyện Vĩnh Thạnh",
+    "pref_new_name": "Xã Thạnh An"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 668,
+    "pref_old_name": "Huyện Cờ Đỏ",
+    "pref_new_name": "Xã Cờ Đỏ"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 669,
+    "pref_old_name": "Huyện Phong Điền",
+    "pref_new_name": "Xã Phong Điền"
+  },
+  {
+    "city_name": "Cần Thơ",
+    "pref_old_id": 670,
+    "pref_old_name": "Huyện Thới Lai",
+    "pref_new_name": "Xã Trường Thành"
+  },
+  {
+    "city_name": "Hậu Giang",
+    "pref_old_id": 671,
+    "pref_old_name": "Thành phố Vị Thanh",
+    "pref_new_name": "Xã Hỏa Lựu"
+  },
+  {
+    "city_name": "Hậu Giang",
+    "pref_old_id": 672,
+    "pref_old_name": "Thành phố Ngã Bảy",
+    "pref_new_name": "Phường Đại Thành"
+  },
+  {
+    "city_name": "Hậu Giang",
+    "pref_old_id": 673,
+    "pref_old_name": "Huyện Châu Thành A",
+    "pref_new_name": "Xã Tân Hòa"
+  },
+  {
+    "city_name": "Hậu Giang",
+    "pref_old_id": 674,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "ERROR: Prefecture not found: Huyện Châu Thành (tried fallback: Thị xã Châu Thành)",
+    "pref_new_fallback": "Huyện Châu Thành"
+  },
+  {
+    "city_name": "Hậu Giang",
+    "pref_old_id": 675,
+    "pref_old_name": "Huyện Phụng Hiệp",
+    "pref_new_name": "Xã Tân Bình"
+  },
+  {
+    "city_name": "Hậu Giang",
+    "pref_old_id": 676,
+    "pref_old_name": "Huyện Vị Thuỷ",
+    "pref_new_name": "Xã Vị Thủy"
+  },
+  {
+    "city_name": "Hậu Giang",
+    "pref_old_id": 677,
+    "pref_old_name": "Huyện Long Mỹ",
+    "pref_new_name": "Xã Lương Tâm"
+  },
+  {
+    "city_name": "Hậu Giang",
+    "pref_old_id": 678,
+    "pref_old_name": "Thị xã Long Mỹ",
+    "pref_new_name": "Phường Long Bình"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 679,
+    "pref_old_name": "Thành phố Sóc Trăng",
+    "pref_new_name": "Phường Phú Lợi"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 680,
+    "pref_old_name": "Huyện Châu Thành",
+    "pref_new_name": "Xã An Ninh"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 681,
+    "pref_old_name": "Huyện Kế Sách",
+    "pref_new_name": "Xã Thới An Hội"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 682,
+    "pref_old_name": "Huyện Mỹ Tú",
+    "pref_new_name": "Xã Mỹ Tú"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 683,
+    "pref_old_name": "Huyện Cù Lao Dung",
+    "pref_new_name": "Xã An Thạnh"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 684,
+    "pref_old_name": "Huyện Long Phú",
+    "pref_new_name": "Xã Tân Thạnh"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 685,
+    "pref_old_name": "Huyện Mỹ Xuyên",
+    "pref_new_name": "Phường Mỹ Xuyên"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 686,
+    "pref_old_name": "Thị xã Ngã Năm",
+    "pref_new_name": "Phường Ngã Năm"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 687,
+    "pref_old_name": "Huyện Thạnh Trị",
+    "pref_new_name": "Xã Vĩnh Lợi"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 688,
+    "pref_old_name": "Thị xã Vĩnh Châu",
+    "pref_new_name": "Phường Vĩnh Châu"
+  },
+  {
+    "city_name": "Sóc Trăng",
+    "pref_old_id": 689,
+    "pref_old_name": "Huyện Trần Đề",
+    "pref_new_name": "Xã Trần Đề"
+  },
+  {
+    "city_name": "Bạc Liêu",
+    "pref_old_id": 690,
+    "pref_old_name": "Thành phố Bạc Liêu",
+    "pref_new_name": "Phường Bạc Liêu"
+  },
+  {
+    "city_name": "Bạc Liêu",
+    "pref_old_id": 691,
+    "pref_old_name": "Huyện Hồng Dân",
+    "pref_new_name": "Xã Hồng Dân"
+  },
+  {
+    "city_name": "Bạc Liêu",
+    "pref_old_id": 692,
+    "pref_old_name": "Huyện Phước Long",
+    "pref_new_name": "Xã Vĩnh Thanh"
+  },
+  {
+    "city_name": "Bạc Liêu",
+    "pref_old_id": 693,
+    "pref_old_name": "Huyện Vĩnh Lợi",
+    "pref_new_name": "Xã Vĩnh Lợi"
+  },
+  {
+    "city_name": "Bạc Liêu",
+    "pref_old_id": 694,
+    "pref_old_name": "Thị xã Giá Rai",
+    "pref_new_name": "Phường Giá Rai"
+  },
+  {
+    "city_name": "Bạc Liêu",
+    "pref_old_id": 695,
+    "pref_old_name": "Huyện Đông Hải",
+    "pref_new_name": "Xã Định Thành"
+  },
+  {
+    "city_name": "Bạc Liêu",
+    "pref_old_id": 696,
+    "pref_old_name": "Huyện Hoà Bình",
+    "pref_new_name": "Xã Hòa Bình"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 697,
+    "pref_old_name": "Thành phố Cà Mau",
+    "pref_new_name": "Phường An Xuyên"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 698,
+    "pref_old_name": "Huyện U Minh",
+    "pref_new_name": "Xã Khánh An"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 699,
+    "pref_old_name": "Huyện Thới Bình",
+    "pref_new_name": "Xã Biển Bạch"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 700,
+    "pref_old_name": "Huyện Trần Văn Thời",
+    "pref_new_name": "Xã Khánh Bình"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 701,
+    "pref_old_name": "Huyện Cái Nước",
+    "pref_new_name": "Xã Cái Nước"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 702,
+    "pref_old_name": "Huyện Đầm Dơi",
+    "pref_new_name": "Xã Đầm Dơi"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 703,
+    "pref_old_name": "Huyện Năm Căn",
+    "pref_new_name": "Xã Đất Mới"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 704,
+    "pref_old_name": "Huyện Phú Tân",
+    "pref_new_name": "Xã Cái Đôi Vàm"
+  },
+  {
+    "city_name": "Cà Mau",
+    "pref_old_id": 705,
+    "pref_old_name": "Huyện Ngọc Hiển",
+    "pref_new_name": "Xã Đất Mũi"
+  }
+]

@@ -21,12 +21,12 @@ export class AddressConverterScraper {
   private readonly selectors: ElementSelectors;
 
   constructor(config?: Partial<ScraperConfig>) {
-    // Default configuration
+    // Default configuration (removed maxRetries for speed)
     this.config = {
       baseUrl: 'https://address-converter.io.vn/',
       timeout: 10000, // 10 seconds
       operationDelay: 2000, // 2 seconds between operations
-      maxRetries: 1,
+      maxRetries: 1, // Keep for interface compatibility but not used
       headless: false, // Set to true for production
       ...config
     };
@@ -353,63 +353,97 @@ export class AddressConverterScraper {
     this.page = await this.context.newPage();
     this.page.setDefaultTimeout(this.config.timeout);
     
+    // Navigate to site after refreshing context
+    await this.navigateToSite();
+    
     console.log('✅ Browser context refreshed');
   }
 
   /**
-   * Process a single address conversion with enhanced retry logic
+   * Reset form dropdowns to their default state for reuse
    */
-  async convertSingleAddress(inputData: InputAddressData): Promise<OutputAddressData> {
+  async resetForm(): Promise<void> {
+    if (!this.page) throw new Error('Browser not initialized');
+    
+    console.log('🔄 Resetting form for next conversion...');
+    
+    try {
+      // Reset dropdowns by reloading the page (faster than individual resets)
+      await this.page.reload();
+      await this.page.waitForLoadState('networkidle');
+      
+      // Close any notification dialog that might appear
+      try {
+        const closeButton = this.page.getByRole('button', { name: 'Close' });
+        if (await closeButton.isVisible({ timeout: 3000 })) {
+          await closeButton.click();
+          await this.page.waitForTimeout(1000);
+        }
+      } catch (error) {
+        // Dialog not present, continue
+      }
+      
+      console.log('✅ Form reset completed');
+    } catch (error) {
+      console.error('❌ Failed to reset form:', error);
+      // If reset fails, fall back to navigation
+      await this.navigateToSite();
+    }
+  }
+
+  /**
+   * Process a single address conversion (no retry logic for speed)
+   */
+  async convertSingleAddress(inputData: InputAddressData, isFirstRun: boolean = false): Promise<OutputAddressData> {
     console.log(`\n🔍 Processing: ${inputData.city_name} - ${inputData.pref_name}`);
     
-    let lastError: Error | null = null;
-    
-    for (let attempt = 1; attempt <= this.config.maxRetries; attempt++) {
-      try {
+    try {
+      // Only navigate to site on first run or if page is not ready
+      if (isFirstRun || !this.page) {
         await this.navigateToSite();
-        await this.selectCity(inputData.city_name);
-        const actualPrefName = await this.selectPrefecture(inputData.pref_name);
-        await this.selectWard();
-        await this.clickConvert();
-        
-        const newName = await this.extractResult();
-        
-        // Check if fallback was used
-        const usedFallback = actualPrefName !== inputData.pref_name;
-        
-        const result: OutputAddressData = {
-          city_name: inputData.city_name,
-          pref_old_id: inputData.pref_old_id,
-          pref_old_name: inputData.pref_name,
-          pref_new_name: newName
-        };
-        
-        // Add fallback field if fallback was used
-        if (usedFallback) {
-          result.pref_new_fallback = newName;
-        }
-        
-        return result;
-        
-      } catch (error) {
-        lastError = error as Error;
-        console.error(`❌ Attempt ${attempt}/${this.config.maxRetries} failed for ${inputData.pref_name}:`, error);
-        
-        if (attempt < this.config.maxRetries) {
-          // Exponential backoff: 2s, 4s, 8s
-          const backoffDelay = Math.pow(2, attempt) * 1000;
-          console.log(`⏳ Waiting ${backoffDelay/1000}s before retry...`);
-          await this.page?.waitForTimeout(backoffDelay);
-          
-          // Refresh browser context every 2 failed attempts to clear any issues
-          if (attempt % 2 === 0) {
-            await this.refreshBrowserContext();
-          }
-        }
+      } else {
+        // Reset form for reuse instead of navigating
+        await this.resetForm();
       }
+      
+      await this.selectCity(inputData.city_name);
+      const actualPrefName = await this.selectPrefecture(inputData.pref_name);
+      await this.selectWard();
+      await this.clickConvert();
+      
+      const newName = await this.extractResult();
+      
+      // Check if fallback was used
+      const usedFallback = actualPrefName !== inputData.pref_name;
+      
+      const result: OutputAddressData = {
+        city_name: inputData.city_name,
+        pref_old_id: inputData.pref_old_id,
+        pref_old_name: inputData.pref_name,
+        pref_new_name: newName
+      };
+      
+      // Add fallback field if fallback was used
+      if (usedFallback) {
+        result.pref_new_fallback = newName;
+      }
+      
+      return result;
+      
+    } catch (error) {
+      console.error(`❌ Failed to process ${inputData.pref_name}:`, error);
+      
+      // Return error result immediately without retry
+      const result: OutputAddressData = {
+        city_name: inputData.city_name,
+        pref_old_id: inputData.pref_old_id,
+        pref_old_name: inputData.pref_name,
+        pref_new_name: `ERROR: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        pref_new_fallback: inputData.pref_name
+      };
+      
+      return result;
     }
-    
-    throw lastError || new Error(`Failed to process ${inputData.pref_name} after ${this.config.maxRetries} attempts`);
   }
 
   /**

@@ -1,5 +1,5 @@
 import { AddressConverterScraper } from './scraper';
-import { readInputData, writeOutputData, validateInputData, createBackup, getLastProcessedId } from './utils';
+import { readInputData, writeOutputData, validateInputData, createBackup, getLastProcessedId, readExistingOutputData } from './utils';
 import { InputAddressData, OutputAddressData } from './types';
 
 /**
@@ -27,11 +27,10 @@ export class AddressConverterApp {
     itemDelay?: number;
     timeout?: number;
   }) {
-    // Initialize scraper with optimized configuration for speed
+    // Initialize scraper with optimized configuration for speed (no retry)
     this.scraper = new AddressConverterScraper({
       headless: options?.headless ?? true,           // Default to headless for speed
       operationDelay: options?.operationDelay ?? 1500, // 1.5s default
-      maxRetries: 3,
       timeout: options?.timeout ?? 15000             // 15s timeout
     });
     
@@ -45,6 +44,7 @@ export class AddressConverterApp {
    */
   async processAllAddresses(options?: { startFromId?: number; resumeFromProgress?: boolean }): Promise<void> {
     let results: OutputAddressData[] = [];
+    let existingResults: OutputAddressData[] = [];
     
     try {
       // Step 1: Read and validate input data
@@ -60,6 +60,14 @@ export class AddressConverterApp {
       let startFromId: number | null = null;
       
       if (options?.resumeFromProgress) {
+        // Load existing converted data first to preserve it
+        try {
+          existingResults = await readExistingOutputData(this.outputFilePath);
+        } catch (error) {
+          console.log('ℹ️  No existing converted data found, starting fresh');
+          existingResults = [];
+        }
+        
         // Get the last processed ID from progress file
         const lastProcessedId = await getLastProcessedId(this.progressFilePath);
         if (lastProcessedId !== null) {
@@ -108,47 +116,37 @@ export class AddressConverterApp {
           await this.delay(2000);
         }
         
-        try {
-          const result = await this.scraper.convertSingleAddress(item);
-          results.push(result);
-          
-          // Optional: Save progress periodically
-          if ((i + 1) % 10 === 0) {
-            await this.saveProgress(results);
-          }
-          
-        } catch (error) {
-          console.error(`❌ Failed to process ${item.pref_name}:`, error);
-          
-          // Add failed entry with error marker
-          results.push({
-            city_name: item.city_name,
-            pref_old_id: item.pref_old_id,
-            pref_old_name: item.pref_name,
-            pref_new_name: `ERROR: ${error instanceof Error ? error.message : 'Unknown error'}`,
-            pref_new_fallback: item.pref_name,
-          });
+        // Process item - pass isFirstRun flag for first item to trigger navigation
+        const result = await this.scraper.convertSingleAddress(item, i === 0);
+        results.push(result);
+        
+        // Optional: Save progress periodically (merge with existing data)
+        if ((i + 1) % 10 === 0) {
+          await this.saveProgress([...existingResults, ...results]);
         }
         
         // Configurable delay between items for optimal speed vs rate limiting
         await this.delay(this.itemDelay);
       }
 
-      // Step 4: Save final results
+      // Step 4: Save final results (merge with existing data)
       console.log('\n💾 Step 4: Saving results...');
+      const finalResults = [...existingResults, ...results];
+      
       await createBackup(this.outputFilePath);
-      await writeOutputData(results, this.outputFilePath);
+      await writeOutputData(finalResults, this.outputFilePath);
       
       // Step 5: Display summary
-      this.displaySummary(results);
+      this.displaySummary(results, existingResults.length);
       
     } catch (error) {
       console.error('\n❌ Application error:', error);
       
-      // Save partial results if any were collected
+      // Save partial results if any were collected (merge with existing data)
       if (results.length > 0) {
+        const partialResults = [...existingResults, ...results];
         const partialOutputPath = `./partial_results_${Date.now()}.json`;
-        await writeOutputData(results, partialOutputPath);
+        await writeOutputData(partialResults, partialOutputPath);
         console.log(`💾 Saved partial results to: ${partialOutputPath}`);
       }
       
@@ -171,15 +169,19 @@ export class AddressConverterApp {
   /**
    * Display processing summary
    */
-  private displaySummary(results: OutputAddressData[]): void {
+  private displaySummary(results: OutputAddressData[], existingCount: number = 0): void {
     const successful = results.filter(r => !r.pref_new_name.startsWith('ERROR:')).length;
     const failed = results.length - successful;
     
     console.log('\n📊 PROCESSING SUMMARY');
     console.log('━'.repeat(50));
+    if (existingCount > 0) {
+      console.log(`📁 Previously processed: ${existingCount}`);
+    }
     console.log(`✅ Successful conversions: ${successful}`);
     console.log(`❌ Failed conversions: ${failed}`);
-    console.log(`📄 Total processed: ${results.length}`);
+    console.log(`📄 Total processed this session: ${results.length}`);
+    console.log(`📄 Total in output file: ${results.length + existingCount}`);
     console.log(`📁 Results saved to: ${this.outputFilePath}`);
     console.log('━'.repeat(50));
   }

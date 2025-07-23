@@ -88,8 +88,28 @@ export async function createBackup(filePath: string): Promise<void> {
 }
 
 /**
- * Read the progress file and get the last processed pref_old_id
+ * Read existing output data for resume functionality
  */
+export async function readExistingOutputData(filePath: string): Promise<OutputAddressData[]> {
+  try {
+    console.log(`📖 Reading existing output data from: ${filePath}`);
+    
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const data: OutputAddressData[] = JSON.parse(fileContent);
+    
+    console.log(`✅ Successfully loaded ${data.length} existing records`);
+    return data;
+    
+  } catch (error) {
+    if ((error as any).code === 'ENOENT') {
+      console.log(`📝 Output file not found, starting fresh`);
+      return [];
+    }
+    
+    console.error(`❌ Failed to read existing output data from ${filePath}:`, error);
+    throw error;
+  }
+}
 export async function getLastProcessedId(progressFilePath: string): Promise<number | null> {
   try {
     console.log(`📖 Reading progress from: ${progressFilePath}`);
